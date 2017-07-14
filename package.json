@@ -48,12 +48,12 @@
     "jscs": "^3.0.7",
     "q": "^1.5.0",
     "rimraf": "^2.6.1",
-    "rue": "0.0.7",
+    "rue": "0.8.0",
     "rue-route": "0.0.1"
   },
   "peerDependencies": {
     "express": "^4.15.3",
-    "rue": "0.0.7",
+    "rue": "0.8.0",
     "rue-route": "0.0.1"
   },
   "files": [
