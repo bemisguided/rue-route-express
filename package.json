@@ -21,9 +21,10 @@
     "build": "npm run build-babel && npm run build-flow",
     "build-babel": "npm run clean && babel ./lib --out-dir dist/ --copy-files",
     "build-flow": "flow-copy-source ./lib ./dist",
-    "test": "npm run flow && jest --coverage",
-    "test-watch": "npm run flow && jest --watch",
-    "jscs": "jscs lib/**/*.js test"
+    "test": "npm run flow && npm run lint && jest --coverage",
+    "test-watch": "jest --watch",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix ."
   },
   "repository": {
     "url": "http://github.com/bemisguided/rue-route-express.git",
@@ -48,13 +49,12 @@
     "jscs": "^3.0.7",
     "q": "^1.5.0",
     "rimraf": "^2.6.1",
-    "rue": "0.8.0",
-    "rue-route": "0.0.1"
+    "rue-route": "0.9.0"
   },
   "peerDependencies": {
     "express": "^4.15.3",
-    "rue": "0.8.0",
-    "rue-route": "0.0.1"
+    "rue": "^0.9.2",
+    "rue-route": "^0.9.0"
   },
   "files": [
     "index.js",
